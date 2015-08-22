@@ -143,37 +143,7 @@
                     <div class="map-canvas" id="map-canvas">Loading map...</div>
                     <div class="container">
                         <div class="row-fluid">
-                            <div class="span5 contact-form centered">
-                                <h3>Say Hello</h3>
-                                <div id="successSend" class="alert alert-success invisible">
-                                    <strong>Well done!</strong>Your message has been sent.</div>
-                                <div id="errorSend" class="alert alert-error invisible">There was an error.</div>
-                                <form id="contact-form" action="php/mail.php">
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="text" id="name" name="name" placeholder="* Your name..." />
-                                            <div class="error left-align" id="err-name">Please enter name.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="email" name="email" id="email" placeholder="* Your email..." />
-                                            <div class="error left-align" id="err-email">Please enter valid email adress.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <textarea class="span12" name="comment" id="comment" placeholder="* Comments..."></textarea>
-                                            <div class="error left-align" id="err-comment">Please enter your comment.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <button id="send-mail" class="message-btn">Send message</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -757,21 +727,21 @@
                             <h5>姓名：</h5>
                             <div class="form-group">
                                 <div class="span6">
-                                    <input type="text" class="form-control" name="name" placeholder="請輸入真實姓名。">
+                                    <input type="text" class="form-control" name="name" placeholder="請輸入真實姓名。" required>
                                 </div>
                                 
                             </div>
                             <h5>密碼：</h5>
                             <div class="form-group">
                                 <div class="span6">
-                                    <input type="password" class="form-control" name="password" placeholder="密碼">
+                                    <input type="password" class="form-control" name="password" placeholder="密碼" required>
                                 </div>
                                 
                             </div>
                             <h5>email :</h5>
                             <div class="form-group">
                                 <div class="span6">
-                                    <input type="email" class="form-control" name="email" placeholder="email地址">
+                                    <input type="email" class="form-control" name="email" placeholder="email地址" required>
                                 </div>
                                 
                             </div>
@@ -813,13 +783,13 @@
                             <div class="span6">
                                 <h5>Account</h5>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="name" placeholder="帳號">
+                                    <input type="text" class="form-control" name="name" placeholder="帳號" required>
                                 </div>
                             </div>
                             <div class="span6">
                                 <h5>Password</h5>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" name="password" placeholder="密碼">
+                                    <input type="password" class="form-control" name="password" placeholder="密碼" required>
                                 </div>
                                 <button class="btn btn-primary-lg" type="submit">Login</button>
                             </div>
@@ -911,7 +881,7 @@
         <script type="text/javascript" src="js/jquery.placeholder.js"></script>
         <script type="text/javascript" src="js/jquery.inview.js"></script>
         <!-- Load google maps api and call initializeMap function defined in app.js -->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;callback=initializeMap"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&amp;callback=initializeMap&libraries=places,visualization"></script>
         <!-- css3-mediaqueries.js for IE8 or older -->
         <!--[if lt IE 9]>
             <script src="js/respond.min.js"></script>

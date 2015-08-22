@@ -377,8 +377,8 @@ $("#send-mail").click(function () {
 
 function initializeMap() {
 
-    var lat = '44.8164056'; //Set your latitude.
-    var lon = '20.46090424'; //Set your longitude.
+    var lat = '25.0263075'; //Set your latitude.
+    var lon = '121.543846'; //Set your longitude.
 
     var centerLon = lon - 0.0105;
 
@@ -403,6 +403,6 @@ function initializeMap() {
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.open(map, marker);
     });
-
+    infowindow.setContent('2015 HackNTU');
     infowindow.open(map, marker);
 }
