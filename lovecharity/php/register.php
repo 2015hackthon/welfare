@@ -2,7 +2,16 @@
 $email=$_POST['email'];
 $name=$_POST['name'];
 $password=$_POST['password'];
-echo $email;
-echo $name;
+if ($email==null) {
+	echo "email is null";
+}else{
+	echo $email;
+}
+if ($name==null) {
+	echo "name is null";
+}else{
+	echo $name;
+}
+
 echo $password;
 ?>
