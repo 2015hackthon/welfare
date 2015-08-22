@@ -464,6 +464,10 @@ p {
 .project-info div {
     margin-bottom:5px;
 }
+.project-info  a{
+color:#BBFFEE;
+}
+
 .close {
     float: right;
     width: 40px;

@@ -291,6 +291,11 @@ a:focus {
 .navbar-fixed-bottom .container {
   width: 940px;
 }
+.spanbox{
+  width: 1000px;
+}
+
+
 
 .span12 {
   width: 940px;
