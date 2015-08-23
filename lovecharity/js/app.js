@@ -391,9 +391,6 @@ function initAutocomplete() {
     var centerLon = lon - 0.0105;
 
     var myOptions = {
-        scrollwheel: false,
-        draggable: false,
-        disableDefaultUI: true,
         center: new google.maps.LatLng(lat, centerLon),
         zoom: 15,
         mapTypeId: google.maps.MapTypeId.ROADMAP
