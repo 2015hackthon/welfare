@@ -380,11 +380,40 @@ $("#send-mail").click(function () {
 // pick list containing a mix of places and predicted search terms.
 
 function initAutocomplete() {
-  var map = new google.maps.Map(document.getElementById('map-canvas'), {
+  /*var map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: {lat:25.0216697, lng: 121.5352956},
     zoom: 13,
     mapTypeId: google.maps.MapTypeId.ROADMAP
-  });
+  });*/
+    var lat = '25.0263075'; //Set your latitude.
+    var lon = '121.543846'; //Set your longitude.
+
+    var centerLon = lon - 0.0105;
+
+    var myOptions = {
+        scrollwheel: false,
+        draggable: false,
+        disableDefaultUI: true,
+        center: new google.maps.LatLng(lat, centerLon),
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    //Bind map to elemet with id map-canvas
+    var map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
+    var marker = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(lat, lon),
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.open(map, marker);
+    });
+    infowindow.setContent('2015 HackNTU');
+    infowindow.open(map, marker);
+
 
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
